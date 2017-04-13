@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>央广购物网</title>
+		<link rel="stylesheet" type="text/css" href="../css/head.css">
+        <link rel="stylesheet" type="text/css" href="../css/shopCar.css">
+        <link rel="stylesheet" type="text/css" href="../css/foot.css">
+		<style>
+			* {margin:0;padding:0;}
+			*:focus {outline:none;}
+			body {font-family:"宋体";font-size:12px;}
+			input,select{font-size:12px;line-height:16px;}
+			img{border:0;display:block;}
+			li{list-style:none}
+			a{color:#666;text-decoration:none;cursor:pointer;}
+			a:hover{color:#C00;text-decoration:underline;}
+		</style>
+		<script src="../js/jquery-1.12.3.js"></script>
+        <script src="../js/common.js"></script>
+        <script src="../js/myCookie.js"></script>
+        <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+		<script src="../js/head.js"></script>
+        <script src="../js/shoppingCar.js"></script>
+		<script>
+			var winWidth;
+			window.onload=function()
+			{
+				winWidth = document.documentElement.clientWidth||document.body.clientWidth;
+			}
+			function fnsCall()
+			{
+				headStart();
+                shoppingCarStart();
+			}
+			$(document).ready(function()
+			{
+				$("#myHead").load("head.html",function()
+				{
+					$("#myFoot").load("foot.html",function()
+					{
+						fnsCall();
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myHead"></div>
+		<div id="myContent">
+        	<div id="wrap-content">
+                <div class="contentBox">
+                    <div class="thisPosTitle">
+                        当前位置:
+                        <a href="#">首页</a>
+                        >
+                        <a href="#">时尚用品</a>
+                    </div>
+                    <div class="gwc_logo">
+                    	<img src="../images/shoppingCar/shoppingLogo.gif">
+                    </div>
+                    <div class="gwc_step">
+                    	<img src="../images/shoppingCar/gwc_01.gif">
+                    </div> 
+                    <div class="gwc_center">
+                    	<div class="title">
+                        	
+                        </div>
+                        <div class="proListBox">
+                        	<div class="listTitle">
+                            	<p class="p1">商品图像</p>
+                                <p class="p1">商品名称</p>
+                                <p class="p2">数量</p>
+                                <p class="p2">售价</p>
+                                <p class="p2">优惠</p>
+                                <p class="p2">删除</p>
+                            </div>
+                            <div class="listPro"> 
+                            	<div class="noPro">您还没有挑选商品， <a href="#">去看看电视直播商品>></a> 或<a href="index.html">返回首页>></a>
+                            	</div>
+                                <div class="proBox">
+                                    <div class="pro">
+                                        <p class="p1 p-1"><a href="#"><img src="../images/shoppingCar/proPic-1.jpg" alt=""></a></p>
+                                        <p class="p1 p-2"><a href="#">爱澜依时尚精品拉杆箱套组</a>
+                                        </p>
+                                        <p class="p2 p-3">
+                                            <span class="conBt sub"></span>
+                                            <input type="text" value="1" id="buyProNum">
+                                            <span class="conBt add"></span>
+                                        </p>
+                                        <p class="p2 p-4">￥<span>0.0</span></p>
+                                        <p class="p2 p-5">￥<span>0.00</span></p>
+                                        <p class="p2 p-6"><a class="deleteBt">删除</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="gwc_cart">
+                        <div class="gwc_js">
+                            <font id="disPrice" style="float:left;color:red;"></font>
+                            <strong>总结算金额： <span class="hong">￥<span id="totalPay">0</span>
+                                </span>
+                            </strong>
+                                &nbsp;&nbsp;
+                            <a class="clearAll">全部删除</a>
+                        </div>
+                        <div class="cartBts">
+                        	<a href="index.html" class="goShop"><img src="../images/shoppingCar/keepShoppingBg.gif"</a><a href="#" class="cartNow"><img src="../images/shoppingCar/cartBg.gif"</a>
+                        </div>
+                    </div> 
+                    <div class="proShow">
+                        <a href="#" target="_blank">
+                            <img src="../images/index/actievePic-1.jpg">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="../images/index/actievePic-2.jpg">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="../images/index/actievePic-3.jpg">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="../images/index/actievePic-4.jpg">
+                        </a>
+                    </div> 
+                </div>
+             </div>
+        </div>
+		<div id="myFoot"></div>
+	</body>
+</html>

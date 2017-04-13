@@ -1,0 +1,58 @@
+/*注册样式*/
+#wrap-head {width:100%;}
+#wrap-head .headBox {width:1200px;height:100px;margin:40px auto;overflow:hidden;}
+#wrap-head .headBox .logo {float:left;}
+#wrap-head .headBox .hello {float:right;height:83px;line-height:83px;margin-right:150px;}
+#wrap-content {width:100%;}
+#wrap-content .contentBox {width:1190px;margin:0 auto;overflow:hidden;border: 10px solid #e8e8e8;padding:30px 0;}
+#wrap-content .contentBox .mainPic {float:left;}
+#wrap-content .contentBox .registBox {float:right;margin-right:150px;position:relative;z-index:1;width:402px;font:14px 微软雅黑;}
+#wrap-content .contentBox .registBox .registTitle {overflow:hidden;margin-bottom:30px;}
+#wrap-content .contentBox .registBox .registTitle span {display:inline-block;}
+#wrap-content .contentBox .registBox .registTitle .registTitle-right {margin-left:50px;}
+#wrap-content .contentBox .registBox .registTitle .registTitle-right a {color:#005da7;}
+#wrap-content .contentBox .registBox form .inputTips {height:14px;margin:5px 0 10px 0;color:red;}
+#wrap-content .contentBox .registBox form .inputDiv {width:300px;border:1px solid #ccc;padding:0 20px 0 10px;}
+#wrap-content .contentBox .registBox form input {width:300px;height:38px;border:0;color:#999;font-size:14px;}
+#wrap-content .contentBox .registBox form .div-1 {background:url(../images/login/phnoeIcon-1.jpg) no-repeat 315px center;}
+#wrap-content .contentBox .registBox form .div-2 {overflow:hidden;}
+#wrap-content .contentBox .registBox form .div-2 div {float:left;}
+#wrap-content .contentBox .registBox form .div-2 input {width:100px;}
+#wrap-content .contentBox .registBox form .div-2 div.inputDiv {width:100px;}
+#wrap-content .contentBox .registBox form .div-2 div.yzCode {height:38px;line-height:38px;margin:0 0 0 20px;font-size:18px;background-color:#eee;padding:0 5px;}
+#wrap-content .contentBox .registBox form .div-3 {overflow:hidden;}
+#wrap-content .contentBox .registBox form .div-3 div {float:left;}
+#wrap-content .contentBox .registBox form .div-3 input {width:100px;}
+#wrap-content .contentBox .registBox form .div-3 div.inputDiv {width:100px;}
+#wrap-content .contentBox .registBox form .div-3 div.dxCode {width:100px;height:38px;line-height:38px;margin:0 0 0 20px;background-color:#eee;}
+#wrap-content .contentBox .registBox form .div-3 div.dxCode span {padding:0 5px;cursor:pointer;}
+#wrap-content .contentBox .registBox form .div-3 div.dxCode span:hover {text-decoration:underline;}
+#wrap-content .contentBox .registBox form .div-4 {position:relative;background:url(../images/login/passIcon.jpg) no-repeat 312px center;}
+#wrap-content .contentBox .registBox form .div-5 {position:relative;background:url(../images/login/passIcon.jpg) no-repeat 312px center;}
+#wrap-content .contentBox .registBox form .passAbsolut {position:absolute;top:0;left:10px;color:#999;height:38px;line-height:38px;} 
+#wrap-content .contentBox .registBox form .div-6 {padding:0 0 10px 0;}
+#wrap-content .contentBox .registBox form .div-6 input {width:15px;height:15px;}
+#wrap-content .contentBox .registBox form .div-6 span {margin-left:10px;}
+#wrap-content .contentBox .registBox form .div-6 span a {color:red;}
+#wrap-content .contentBox .registBox form .registBt {width:340px;height:39px;background:url(../images/login/land-icon.png) no-repeat 0 -187px;cursor:pointer;}
+#wrap-content .contentBox .registBox form .registBt:hover {background-position:0 -241px;}
+
+/*#wrap-content .contentBox .loginBox .phoneLoginText {display:none;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText p {font-size:14px;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText p.userText {margin-top:20px;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .div-in {margin:5px 0;padding:0 20px 0 10px;background:url(../images/login/loginIcon.jpg) no-repeat 340px center;border:1px solid #ccc;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText input.input-in {width:330px;height:35px;border:0;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .getDPass {margin-top:20px;overflow:hidden;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .getDPass .getBt {float:left;display: block;padding: 5px 0px;background: #f8f8f8;width: 120px;border: solid 1px #ccc;text-align: center;color: #535353;cursor:pointer;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .getDPass .getTip {margin-left:20px;color:#ccc;display:none;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText p.dPassText {margin-top:10px;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText div.passWord {background-image:url(../images/login/passIcon.jpg);}
+#wrap-content .contentBox .loginBox .phoneLoginText .loginBt {margin:20px 0 0 10px;width:342px;height:39px;background:url(../images/login/land-icon.png) no-repeat 0 -7px;cursor:pointer;}
+#wrap-content .contentBox .loginBox .phoneLoginText .loginBt:hover {background-position:0 -60px;}
+#wrap-content .contentBox .loginBox .phoneLoginText .noMoneyLogin {text-align:right;height:30px;line-height:30px;font-size:14px;border-bottom:1px solid #ccc;}
+#wrap-content .contentBox .loginBox .phoneLoginText .cooprate {padding:10px 0;}*/
+
+
+#wrap-foot {width:100%;}
+#wrap-foot .footBox {width:1200px;text-align: center;padding: 50px 0 50px 0;}
+#wrap-foot .footBox a {height:20px;line-height:20px;padding: 0 37px;font: 14px/14px 微软雅黑;color: #656766;font-weight: bold;}

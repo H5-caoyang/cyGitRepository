@@ -1,0 +1,934 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>主页-央广购物网</title>
+		<link rel="stylesheet" type="text/css" href="../css/head.css">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/foot.css">
+		<style>
+			* {margin:0;padding:0;}
+			*:focus {outline:none;}
+			body {font-family:"宋体";font-size:12px;}
+			input,select{font-size:12px;line-height:16px;}
+			img{border:0;display:block;}
+			li{list-style:none}
+			a{color:#666;text-decoration:none;}
+			a:hover{color:#C00;text-decoration:underline;}
+		</style>
+		<script src="../js/jquery-1.12.3.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/myCookie.js"></script>
+        <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+		<script src="../js/head.js"></script>
+		<script src="../js/index.js"></script>
+		<script>
+			var winWidth;
+			window.onload=function()
+			{
+			}
+			function fnsCall()
+			{
+				winWidth = document.documentElement.clientWidth||document.body.clientWidth;
+				headStart();
+				indexStart(winWidth);
+			}
+			$(document).ready(function()
+				{
+					fnsCall();
+				});
+		</script>
+	</head>
+	<body>
+		<div id="myHead">
+        	<div id="wrap-head">
+                <div class="headMsgBg">
+                    <div class="msgBox">
+                        <a href="#" class="collectThis">收藏本站</a>
+                        <div class="mid">
+                            <span id="welcome">欢迎来到央广购物！[<a href="login.html" id="loginBt">登录</a>|<a href="regist.html" id="registBt">免费注册</a>]
+                            </span>
+                            <span id="welcomeAfterLogin">您好！<a href="#" id="loginUser"></a>,欢迎来到央广购物！<a href="index.html" id="exitBt"><b>退出</b></a>
+                            </span>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="memberCenter">会员中心</a>|<a href="#" class="myAccount">我的订单</a>|<a href="#" class="help">帮助中心</a>|<a href="#" class="dianZi">电子型录</a>|<a href="#" class="mobile">移动客户端</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="headText">
+                    <a href="index.html" class="myLogo"><img src="../images/head/new-logo.jpg" alt="央广购物" /></a>
+                    <div class="searchBox">
+                        <input type="text" id="searchText" placeholder="输入您想要的商品的ID/名称" />
+                        <input type="button" id="searchBt" />
+                    </div>
+                    <a href="#" class="picLink"><img src="../images/head/picShow.jpg" alt="" /></a>
+                    <div class="linkShow">
+                        <a href="#" class="myLive"><img src="../images/head/liveNow.jpg" alt="正在直播" /></a>
+                        <a href="#" class="textLink">TT蜂王浆3D双耳挂拉提面膜<span>￥252</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navBg">
+                    <div class="navBox">
+                        <ul class="navUl navUl-1">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="#">品牌旗舰店</a></li>
+                            <li><a href="#">今日特惠</a></li>
+                            <li><a href="#">正在直播</a></li>
+                            <li><a href="#">新品上市</a></li>
+                            <li class="last"><a href="#">清仓频道</a>
+                                <span class="new"></span>
+                            </li>
+                        </ul>
+                        <div class="shoppingBg">
+                            <a href="shoppingCar.html" class="btCar">购物车</a>
+                            <p class="goodCountBg"><span id="goodCount">0</span></p>
+                            <div class="shoppingTip">
+                                <div class="noneBox">
+                                    <p class="cheNone">购物车中还没有商品，赶紧选购吧！</p>
+                                </div>	
+                                <div class="proListBox">
+                                    <ul>
+                                        <li>
+                                            <div class="img"><a href="#"><img src="../images/shoppingCar/proPic-1.jpg"></a>
+                                            </div>
+                                            <div class="proText">
+                                                <p><a href="#">TT蜂王浆3D双耳挂拉提面膜</a>
+                                                </p>
+                                                <p>￥<span>100</span> × <span>1</span>
+                                                </p>
+                                            </div>
+                                            <div class="deleteBt"><a>删除</a></div>
+                                        </li>
+                                    </ul>
+                                    <p class="payMsgBox">共<span class="proCount">0</span> 件商品 金额总计：<span class="proTotalPay">￥<span>4155</span></span>
+                                    </p>
+                                    <div class="cartBtBox">
+                                        <a href="shoppingCar.html">去购物车并结算</a>
+                                    </div>
+                                    <p class="p-last">网络支付98折(仅幸福价商品)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="navUl navUl-2">
+                            <li><a href="productsList.html?proNumber=01" class="a-li">服装配饰</a>
+                                <div class="navList nL-1">
+                                    <div class="left">
+                                        <!-- <dl>
+                                            <dt><a href="#">配饰</a></dt>
+                                            <dd><a href="#">箱包</a><a href="#">精选女用包</a><a href="#">实用功能包</a><a href="#">太阳镜</a><a href="#">女鞋</a><a href="#">男鞋</a><a href="#">其他</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="#">内衣</a></dt>
+                                            <dd><a href="#">保暖内衣</a><a href="#">内衣裤</a><a href="#">文胸</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="#">服装</a></dt>
+                                            <dd><a href="#">男士服装</a><a href="#">女士服装</a><a href="#">其他</a></dd>
+                                        </dl> -->
+                                    </div>
+                                    <dl class="right">
+                                        <dt>热门品牌</dt>
+                                        <dd>
+                                            <a href="#">娇韵诗</a>
+                                            <a href="#">GUCCI</a>
+                                            <a href="#">娇诗婷</a>
+                                            <a href="#">马踏飞燕</a>
+                                            <a href="#">仙子宜岱</a>
+                                            <a href="#">米兰春天</a>
+                                            <a href="#">马克芬迪</a>
+                                            <a href="#">SUNQUEEN</a>
+                                            <a href="#">富威格</a>
+                                            <a href="#">Rothania</a>
+                                            <a href="#">澳牧绒</a>
+                                            <a href="#">梦莱雅</a>
+                                            <a href="#">C&amp;C</a>
+                                            <a href="#">步非凡</a>
+                                            <a href="#">其他品牌</a>
+                                            <a href="#">爱恋伊</a>
+                                            <a href="#">诗尔莉</a>
+                                            <a href="#">瓦萨瓦旗</a>
+                                            <a href="#">CYDNEY MAR</a>
+                                            <a href="#">AIRBAK</a>
+                                            <a href="#">雅鹿&middot;自由自在</a>
+                                            <a href="#">阙兰绢</a>
+                                            <a href="#">黛莱美</a>
+                                            <a href="#">欧尔佳</a>
+                                            <a href="#">尚贵人</a>
+                                            <a href="#">芭比</a>
+                                            <a href="#">朵漫</a>
+                                            <a href="#">VIONIC</a>
+                                            <a href="#">南极人</a>
+                                            <a href="#">欧典梵高</a>
+                                            <a href="#">馨蒂</a>
+                                            <a href="#">帝奥恺撒</a>
+                                            <a href="#">芬维雅</a>
+                                            <a href="#">N.L</a>
+                                            <a href="#">木棉道</a>
+                                            <a href="#">MEYOE</a>
+                                            <a href="#">Nina Leonard</a>
+                                            <a href="#">阿诗玛</a>
+                                            <a href="#">S.T</a>
+                                            <a href="#">玛缇花</a>
+                                            <a href="#">老爷车</a>
+                                            <a href="#">凯莎</a>
+                                            <a href="#">浪莎</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li><a href="productsList.html?proNumber=02" class="a-li">珠宝饰品</a>
+                            </li>
+                            <li><a href="productsList.html?proNumber=03" class="a-li">美容用品</a></li>
+                            <li><a href="productsList.html?proNumber=04" class="a-li">厨房用品</a></li>
+                            <li><a href="productsList.html?proNumber=05" class="a-li">厨房电器</a></li>
+                            <li><a href="productsList.html?proNumber=06" class="a-li">家庭生活</a></li>
+                            <li><a href="productsList.html?proNumber=07" class="a-li">数码家电</a></li>
+                            <li><a href="productsList.html?proNumber=08" class="a-li">礼品收藏</a></li>
+                            <li><a href="productsList.html?proNumber=09" class="a-li">食品酒水</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="paoMa">
+                    <p><marquee scrolldelay="2" scrollamount="3" class="myMarquee">【温馨提示】近期有不少不法分子通过网络诈骗，一切有关于汇钱的交易不应理会！</marquee></p>
+                </div>
+            </div>
+        </div>
+		<div id="myContent">
+			<div id="wrap-content">
+				<div class="bannerBox">
+					<div class="bannerPic">
+						<a href="#" class="pic-1"></a>
+						<a href="#" class="pic-2"></a>
+						<a href="#" class="pic-3"></a>
+						<a href="#" class="pic-4"></a>
+						<a href="#" class="pic-5"><!-- <img src="../images/index/banner005.jpg" alt=""> --></a>
+					</div>
+	                <div class="picNumBt">
+	                        <span class="sp-1">1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+	                    </div>
+				</div>
+				<div class="contentBox">
+	            	<div class="tvLiveInBanner">
+	                    <div class="part-1"> 
+	                        <a href="#" class="a-1"></a><a href="#" class="a-2"></a><a href="#" class="a-3"></a><a href="#" class="a-4"></a>
+	                    </div>
+	                    <div class="part-2"> 
+	                        <a href="#" class="linkPic"></a>
+	                        <p class="linkP"><a href="#" class="linkA">海瑞雅浪漫经典红宝石超值组</a></p>
+	                    </div>
+	                </div>
+					<div class="contPart-1">
+						<div class="left">
+							<div class="tvZbTitle">
+								<span class="spMore"><a href="#" target="_blank">更多</a></span> <span class="spTvList"><a href="#" target="_blank">节目表</a>&nbsp;|&nbsp;</span>
+							</div>
+							<div class="tvZbText">
+								<div class="video">
+									<a href="#" target="_blank"><img src="../images/index/tvVedio.jpg"></a>
+								</div>
+								<div class="hotKindBox">
+									<div class="hotKind">
+										<span class="hotSell hs-1">正在热卖</span><span>&nbsp;|&nbsp;</span><span class="hotSell hs-2">昨日热卖</span><span>&nbsp;|&nbsp;</span><span class="hotSell hs-3">近期热卖</span>
+									</div>
+									<div class="hotScroll">
+										<div class="scrForward"></div>
+										<div class="scrPic">
+											<div class="pics">
+												<dl>
+													<dt>
+														<a href="#"><img src="../images/index/todayHotScroll-1.jpg" alt=""></a>
+														<span>￥698</span>	
+													</dt>
+													<dd>
+														<a href="#" title="爱澜依时尚精品拉杆箱套组">爱澜依时尚精品拉杆箱套组</a>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<a href="#"><img src="../images/index/todayHotScroll-2.jpg" alt=""></a>
+														<span>￥698</span>	
+													</dt>
+													<dd>
+														<a href="#">爱澜依时尚精品拉杆箱套组</a>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<a href="#"><img src="../images/index/todayHotScroll-3.jpg" alt=""></a>
+														<span>￥698</span>	
+													</dt>
+													<dd>
+														<a href="#">爱澜依时尚精品拉杆箱套组</a>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<a href="#"><img src="../images/index/todayHotScroll-1.jpg" alt=""></a>
+														<span>￥698</span>	
+													</dt>
+													<dd>
+														<a href="#">爱澜依时尚精品拉杆箱套组</a>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<a href="#"><img src="../images/index/todayHotScroll-1.jpg" alt=""></a>
+														<span>￥698</span>	
+													</dt>
+													<dd>
+														<a href="#">爱澜依时尚精品拉杆箱套组</a>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<a href="#"><img src="../images/index/todayHotScroll-1.jpg" alt=""></a>
+														<span>￥698</span>	
+													</dt>
+													<dd>
+														<a href="#">爱澜依时尚精品拉杆箱套组</a>
+													</dd>
+												</dl>
+											</div>
+										</div>
+										<div class="scrNext"></div>
+									</div>
+								</div>
+							</div>
+							<div class="hotSellTitle">
+							</div>
+							<div class="hotSellText">
+								<dl class="dl-1">
+									<dt>
+										<a href="#"><img src="../images/index/todayHotScroll-1.jpg" alt=""></a>
+										<span></span>
+									</dt>
+									<dd>
+										<a href="#"><p class="text">爱澜依时尚精品拉杆箱套组</p><p class="price">幸福价：￥468</p>
+										</a>
+									</dd>
+								</dl>
+								<dl class="dl-2">
+									<dt>
+										<a href="#"><img src="../images/index/todayHotScroll-2.jpg" alt=""></a>
+										<span></span>
+									</dt>
+									<dd>
+										<a href="#"><p class="text">爱澜依时尚精品拉杆箱套组</p><p class="price">幸福价：￥468</p>
+										</a>
+									</dd>
+								</dl>
+								<dl class="dl-3">
+									<dt>
+										<a href="#"><img src="../images/index/todayHotScroll-3.jpg" alt=""></a>
+										<span></span>
+									</dt>
+									<dd>
+										<a href="#"><p class="text">爱澜依时尚精品拉杆箱套组</p><p class="price">幸福价：￥468</p>
+										</a>
+									</dd>
+								</dl>
+								<dl class="dl-4">
+									<dt>
+										<a href="#"><img src="../images/index/todayHotScroll-4.jpg" alt=""></a>
+										<span></span>
+									</dt>
+									<dd>
+										<a href="#"><p class="text">爱澜依时尚精品拉杆箱套组</p><p class="price">幸福价：￥468</p>
+										</a>
+									</dd>
+								</dl>
+								<dl class="dl-5">
+									<dt>
+										<a href="#"><img src="../images/index/todayHotScroll-5.jpg" alt=""></a>
+										<span></span>
+									</dt>
+									<dd>
+										<a href="#"><p class="text">爱澜依时尚精品拉杆箱套组</p>
+										<p class="price">幸福价：￥468</p>
+										</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="right">
+							<div class="newArrival">
+								<h3>新品上市<span>New</span></h3>
+								<ul>
+						            <li class="liBig lb-1">
+						            	<p class="liLeft red">1.</p>
+						            	<div class="liMid">
+							            	<a target="_blank" href="#">BOSSWAY金牌纪...</a>
+							            	<p>￥1990.0</p>
+						            	</div>
+						            	<a target="_blank" href="#" class="liRight red"><img src="../images/index/newArrival-1.jpg">
+						            	</a>
+						            </li>
+	                                 <li class="liSmall ls-1">
+						            	<p class="liLeft red">1.</p><p class="liMid">BOSSWAY金牌纪...</p><p class="liRight red">￥1990.0</p>
+					            	</li>
+	                                <li class="liBig lb-2">
+						            	<p class="liLeft red">2.</p>
+						            	<div class="liMid">
+							            	<a target="_blank" href="#">BOSSWAY金牌纪...</a>
+							            	<p>￥1990.0</p>
+						            	</div>
+						            	<a target="_blank" href="#" class="liRight red"><img src="../images/index/newArrival-1.jpg">
+						            	</a>
+						            </li>
+	                                <li class="liSmall ls-2">
+						            	<p class="liLeft red">2.</p><p class="liMid">BOSSWAY金牌纪...</p><p class="liRight red">￥1990.0</p>
+					            	</li>
+	                                <li class="liBig lb-3">
+						            	<p class="liLeft red">3.</p>
+						            	<div class="liMid">
+							            	<a target="_blank" href="#">BOSSWAY金牌纪...</a>
+							            	<p>￥1990.0</p>
+						            	</div>
+						            	<a target="_blank" href="#" class="liRight red"><img src="../images/index/newArrival-1.jpg">
+						            	</a>
+						            </li>
+	 								<li class="liSmall ls-3">
+						            	<p class="liLeft red">3.</p><p class="liMid">BOSSWAY金牌纪...</p><p class="liRight red">￥1990.0</p>
+					            	</li>
+	                                <li class="liBig lb-4">
+						            	<p class="liLeft red">4.</p>
+						            	<div class="liMid">
+							            	<a target="_blank" href="#">BOSSWAY金牌纪...</a>
+							            	<p>￥1990.0</p>
+						            	</div>
+						            	<a target="_blank" href="#" class="liRight red"><img src="../images/index/newArrival-1.jpg">
+						            	</a>
+						            </li>
+	                                <li class="liSmall ls-4">
+						            	<p class="liLeft red">4.</p><p class="liMid">BOSSWAY金牌纪...</p><p class="liRight red">￥1990.0</p>
+					            	</li>
+	                                <li class="liBig lb-5">
+						            	<p class="liLeft red">5.</p>
+						            	<div class="liMid">
+							            	<a target="_blank" href="#">BOSSWAY金牌纪...</a>
+							            	<p>￥1990.0</p>
+						            	</div>
+						            	<a target="_blank" href="#" class="liRight red"><img src="../images/index/newArrival-1.jpg">
+						            	</a>
+						            </li>
+	                                <li class="liSmall ls-5">
+						            	<p class="liLeft red">5.</p><p class="liMid">BOSSWAY金牌纪...</p><p class="liRight red">￥1990.0</p>
+					            	</li>
+						        </ul>
+							</div>
+							<div class="promotionAct">
+								<h3>优惠活动<span>Event</span></h3>
+	                            <div class="picShowBox">
+	                            	<div class="picScroll">
+	                                	<div>
+	                                    	<a href="#" class="a-pic"><img src="../images/index/actievePic-1.jpg"></a>
+	                                    	<p><a href="#">全部商品88折+买赠玛瑙手串</a></p>
+	                                    </div>
+	                                    <div>
+	                                    	<a href="#" class="a-pic"><img src="../images/index/actievePic-2.jpg"></a>
+	                                    	<p><a href="#">每天两款产品限时抢购</a></p>
+	                                    </div>
+	                                    <div>
+	                                    	<a href="#" class="a-pic"><img src="../images/index/actievePic-3.jpg"></a>
+	                                    	<p><a href="#">全场清仓 八折特惠+买赠</a></p>
+	                                    </div>
+	                                </div>	
+	                            	<div class="btChangePic for"></div>
+	                                <div class="btChangePic next"></div>
+	                            	<div class="btHover">
+	                                	<span></span><span></span><span></span>
+	                                </div>
+	                            </div>
+							</div>
+						</div>
+					</div>
+					<div class="contPart-2">
+						<div class="title"><strong>会员中心/</strong><em>Member Center</em></div>
+						<div class="textBox">
+							<div class="picList">
+								<div class="div-1">
+									<img src="../images/index/memberPic-1.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-2.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-3.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-4.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-5.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-6.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-7.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-8.jpg" alt="">
+								</div>
+								<div>
+									<img src="../images/index/memberPic-9.jpg" alt="">
+								</div>
+							</div>
+	                        <div class="commentBox">
+	                        	<div class="comment com-1">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">TT珍珠玫瑰双耳挂提拉面膜</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-1.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-2">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">东菱不锈钢全能料理棒劲爆组</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-2.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-3">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">盛力源蜂胶软胶囊健康超值套组</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-3.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-4">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">涤太太超氧活力去污乳抢购组</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-4.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-5">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">韩国Clara多功能烹煮锅</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-5.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-6">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">香草管道快速疏通剂升级组</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-6.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-7">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">酝蜂行东北农家雪蜜特惠组</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-7.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-8">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">N.L针织纽扣长裤</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-8.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="comment com-9">
+	                                <div class="hotComment">
+	                                    <a href="#" class="hotLink">法国卡莱斯庄园干红套组</a>
+	                                    <a href="#" class="hotPic"><img src="../images/index/memberPicBig-9.jpg" alt=""></a>
+	                                </div>
+	                                <div class="myComment">
+	                                    <div class="user no1">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">第三次购买了真的很不错</p>
+	                                    </div>
+	                                    <div class="dashedLine"></div>
+	                                    <div class="user no2">
+	                                        <a href="" class="userH"><img src="../images/index/userHead.GIF" alt=""></a>
+	                                        <div class="userM">
+	                                            <p>评价人:mind</p>
+	                                            <p><span class="sp-1">时间：2015-09-11 00:27:06</span><span class="sp-2"><b></b><b></b><b></b><b></b><b></b></span></p>
+	                                        </div>
+	                                        <p class="userText">TT面膜是第二次购买了不愧是央广购物销量NO.1明星商品，真的使用得非常好，不挑脸型、肤质和年龄…</p>
+	                                    </div>
+	                                    <div class="more">
+	                                        <span>共有3条评论&nbsp;</span><a href="#">查看全部&#62;</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+							<div class="mBirthday">
+								<h3>会员生日关怀</h3><h4>本月生日会员名单</h4>
+								<ul>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+									<li><span class="sp-1">王世荫</span><span class="sp-2">会员</span><span class="sp-3">北京市北京市</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="textFoot">
+							<div class="part pt-1">
+								<a href="#" class="changePic"><img src="../images/index/memberFoot-2.jpg" alt=""></a>
+								<div class="changeText">
+									<a href="#" class="proName">海立得空气净化机</a>
+									<p class="price">幸福金:<b>120元</b></p>
+									<a href="#" class="changeBt"><img src="../images/index/changeBt.jpg" alt=""></a>
+								</div>
+							</div>
+							<div class="part pt-2">
+								<p class="title"><a href="#">会员互动</a></p>
+								<ul>
+									<li>·<a href="#">【大妈时尚秀】北京首show盛大开幕</a></li>
+									<li>·<a href="#">【大妈时尚秀】北京首show盛大开幕</a></li>
+									<li>·<a href="#">【大妈时尚秀】北京首show盛大开幕</a></li>
+									<li>·<a href="#">【大妈时尚秀】北京首show盛大开幕</a></li>
+								</ul>
+							</div>
+							<div class="part pt-3">
+								<a href="#" class="a-Pic"><img src="../images/index/memberFoot-3.jpg" alt=""></a>
+								<a href="#">会员权益</a>
+							</div>
+							<div class="part pt-3">
+								<a href="#" class="a-Pic"><img src="../images/index/memberFoot-4.jpg" alt=""></a>
+								<a href="#">幸福团<br />团员招募</a>
+							</div>
+							<div class="part pt-3">
+								<a href="#" class="a-Pic"><img src="../images/index/memberFoot-5.jpg" alt=""></a>
+								<a href="#">订单物流<br />动态查询</a>
+							</div>
+							<div class="part pt-3">
+								<a href="#" class="a-Pic"><img src="../images/index/memberFoot-6.jpg" alt=""></a>
+								<a href="#" class="checkBt"><img src="../images/index/checkBt.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="contPart-3">
+	                	<div class="title"><a href="#">善美品牌旗舰店，全场清仓特惠88折，买即赠玛瑙手链一条。</a>
+	                    </div>
+						<div class="flagStore">
+							<div class="picBox">
+	                        	<div class="picScroll">
+	                            	<a href="#"><img src="../images/index/flagStoreB-1.jpg" /></a>
+	                                <a href="#"><img src="../images/index/flagStoreB-2.jpg" /></a>
+	                                <a href="#"><img src="../images/index/flagStoreB-3.jpg" /></a>
+	                                <a href="#"><img src="../images/index/flagStoreB-4.jpg" /></a>
+	                                <a href="#"><img src="../images/index/flagStoreB-5.jpg" /></a>
+	                            </div>
+	                        </div>
+	                        <ul class="list">
+	                        	<li class="big first b-1"><a href="#">善美品牌旗舰店全场88折加买赠</a></li>
+	                            <li class="small first s-1"><span>善美品牌旗舰店全场88折加买赠</span></li>
+	                            <li class="big b-2"><a href="#">朔麟品牌旗舰店 全场清仓</a></li>
+	                            <li class="small s-2"><span>朔麟品牌旗舰店 全场清仓</span></li>
+	                            <li class="big b-3"><a href="#">网站韩束品牌旗舰店 贴近自然寻求美丽</a></li>
+	                            <li class="small s-3"><span>网站韩束品牌旗舰店 贴近自然寻求美丽</span></li>
+	                            <li class="big b-4"><a href="#">网站新光饰品旗舰店  引领流行时尚</a></li>
+	                            <li class="small s-4"><span>网站新光饰品旗舰店  引领流行时尚</span></li>
+	                            <li class="big b-5"><a href="#">御凤轩品牌旗舰店买即赠玛瑙手链</a></li>
+	                            <li class="small s-5"><span>御凤轩品牌旗舰店买即赠玛瑙手链</span></li>
+	                        </ul>
+						</div>
+						<div class="flagProduct">
+							<div class="product pro-1"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-1.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-2"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-2.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-3"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-3.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-4"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-4.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-5"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-5.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-6"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-6.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-7"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-7.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-8"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-8.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+	                        <div class="product pro-9"><span class="mask"></span><a href="#"><img src="../images/index/flagStoreB-9.jpg"></a><p class="linkText"><a href="#">熙尊珠宝旗舰店 买即赠石英岩龙牌 </a></p>
+	                        </div>
+						</div>
+					</div>
+					<div class="contPart-4">
+	                	<div class="noticeLeft">
+	                    	<h4><a href="#">公告</a></h4>
+							<ul>
+	                        	<li>·<a href="#">【停售刀具】新疆停售刀具</a></li>
+	                            <li>·<a href="#">【停售刀具】新疆停售刀具</a></li>
+	                            <li>·<a href="#">【停售刀具】新疆停售刀具</a></li>
+	                            <li>·<a href="#">【停售刀具】新疆停售刀具</a></li>
+	                        </ul>                        
+	                    </div>
+	                    <div class="noticeMid">
+	                    	<h4>央广购物 <span>中央人民广播电台旗下</span></h4>
+	                        <div class="linkBox">
+	                        	<div class="link"><a href="#"><img src="../images/index/notice-1.jpg"></a><p><a href="#">公司简介</a></p></div>
+	                            <div class="link"><a href="#"><img src="../images/index/notice-2.jpg"></a><p><a href="#">购物专家</a></p></div>
+	                            <div class="link"><a href="#"><img src="../images/index/notice-3.jpg"></a><p><a href="#">幸福图书馆</a></p></div>
+	                            <div class="link"><a href="#"><img src="../images/index/notice-4.jpg"></a><p><a href="#">幸福商学院</a></p></div>
+	                            <div class="link"><a href="#"><img src="../images/index/notice-5.jpg"></a><p><a href="#">幸福团招募</a></p></div>
+	                        </div>
+	                    </div>
+	                    <div class="noticeRight">
+	                     	<a href="#"><img src="../images/index/notice-6.jpg"></a>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+		<div id="myFoot">
+        	<div id="wrap-foot">
+                <div class="part-1">
+                    <div class="linkBox lb-1">
+                        <div class="linkTitle">购物指南</div>
+                        <ul>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                        </ul>
+                    </div>
+                    <div class="linkBox lb-2">
+                        <div class="linkTitle">会员中心</div>
+                        <ul>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                        </ul>
+                    </div>
+                    <div class="linkBox lb-3">
+                        <div class="linkTitle">配送服务</div>
+                        <ul>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                        </ul>
+                    </div>
+                    <div class="linkBox lb-4">
+                        <div class="linkTitle">支付说明</div>
+                        <ul>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                        </ul>
+                    </div>
+                    <div class="linkBox lb-5">
+                        <div class="linkTitle">售后服务</div>
+                        <ul>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                            <li><a href="#">用户注册流程 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="part-2"></div>
+                <div class="midLine"></div>
+                <div class="part-3">
+                    <div class="CNRPic">
+                    </div>
+                    <div class="cont">
+                        <div class="linkFoot">
+                            <a href="#">关于我们</a>
+                            <a href="#">联系我们	</a>
+                            <a href="#">招商合作</a>
+                            <a href="#">招贤纳士</a>
+                            <a href="#">友情链接</a>
+                            <a href="#" style="text-decoration:underline;">QVC</a>
+                        </div>
+                        <div class="textBox">
+                            <div class="text">
+                                <p>Copyright©2010-2016 cnrmall. All Rights Reserved</p>
+                                <p>京ICP备10038858号 京公网安备：11011502002190</p>
+                                <p>食品流通许可证编号：SP1101151210063489</p>
+                                <p>企业营业执照注册号：110102012202484   企业法人： 董铁明</p>
+                                <p>央广幸福购物（北京）有限公司</p>
+                                <p>住所：北京市大兴区西红门镇北兴路（东段）2号星光影视园新媒体 大厦</p>
+                                <p>经营场所：北京市大兴区西红门镇北兴路（东段）2号院20号楼5层 5018号</p>
+                                <p>我司投诉专线为：4008518518转5号键</p>
+                                <p>北京市工商行政管理局大兴分局兴政街工商所，投诉监督电话：010-69254218</p>
+                            </div>
+                            <a href="#" class="QRCode"><img src="../images/foot/footPic-2.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

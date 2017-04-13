@@ -1,0 +1,46 @@
+/*登录样式*/
+#wrap-head {width:100%;}
+#wrap-head .headBox {width:1200px;height:100px;margin:40px auto;overflow:hidden;}
+#wrap-head .headBox .logo {float:left;}
+#wrap-head .headBox .hello {float:right;height:83px;line-height:83px;margin-right:150px;}
+#wrap-head .headBox .hello a {color:#005da7;}
+#wrap-content {width:100%;}
+#wrap-content .contentBox {width:1190px;margin:0 auto;overflow:hidden;border: 10px solid #e8e8e8;padding:30px 0;}
+#wrap-content .contentBox .mainPic {float:left;}
+#wrap-content .contentBox .loginBox {float:right;margin-right:50px;position:relative;z-index:1;}
+#wrap-content .contentBox .loginBox .titleBox {position:absolute;z-index:2;}
+#wrap-content .contentBox .loginBox .loginTitle {float:left;padding:0 10px;text-align:center;display:block;height:45px;line-height:45px;font-size:18px;border:1px solid #eee;cursor:pointer;}
+#wrap-content .contentBox .loginBox .nameLogin {border-color:#ccc;border-bottom-color:#fff;background-color:#fff;}
+#wrap-content .contentBox .loginBox .phoneLogin {border-bottom-color:#ccc;background-color:#f5f5f5;}
+#wrap-content .contentBox .loginBox .text {height:360px;margin-top:46px;padding:20px 60px;border:1px solid #ccc;position:relative;}
+#wrap-content .contentBox .loginBox .text p {font-size:14px;}
+#wrap-content .contentBox .loginBox .text p.inputTips {height:14px;margin:5px 0 20px 0;color:red;}
+#wrap-content .contentBox .loginBox .text .nameLoginText {display:block;}
+#wrap-content .contentBox .loginBox .text .nameLoginText p.userText {margin-top:20px;}
+#wrap-content .contentBox .loginBox .text .nameLoginText .div-in {margin:5px 0;padding:0 20px 0 10px;background:url(../images/login/loginIcon.jpg) no-repeat 340px center;border:1px solid #ccc;}
+#wrap-content .contentBox .loginBox .text .nameLoginText input.input-in {width:330px;height:35px;border:0;}
+#wrap-content .contentBox .loginBox .text .nameLoginText div.passWord {background-image:url(../images/login/passIcon.jpg);}
+#wrap-content .contentBox .loginBox .nameLoginText .checkBox {padding-left:70px;}
+#wrap-content .contentBox .loginBox .nameLoginText .checkBox #autoLogin {margin-left:50px;}
+#wrap-content .contentBox .loginBox .nameLoginText .loginBt {margin:10px 0 0 10px;width:342px;height:39px;background:url(../images/login/land-icon.png) no-repeat 0 -7px;cursor:pointer;}
+#wrap-content .contentBox .loginBox .nameLoginText .loginBt:hover {background-position:0 -60px;}
+#wrap-content .contentBox .loginBox .nameLoginText .fogetPass {text-align:right;height:30px;line-height:30px;border-bottom:1px solid #ccc;}
+#wrap-content .contentBox .loginBox .nameLoginText .cooprate {padding:10px 0;} 
+
+#wrap-content .contentBox .loginBox .phoneLoginText {display:none;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText p.userText {margin-top:20px;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .div-in {margin:5px 0;padding:0 20px 0 10px;background:url(../images/login/loginIcon.jpg) no-repeat 340px center;border:1px solid #ccc;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText input.input-in {width:330px;height:35px;border:0;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .getDPass {overflow:hidden;margin-bottom:10px;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .getDPass .getBt {float:left;display: block;padding: 5px 0px;background: #f8f8f8;width: 120px;border: solid 1px #ccc;text-align: center;color: #535353;cursor:pointer;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText .getDPass .getTip {margin-left:20px;color:#ccc;display:none;}
+#wrap-content .contentBox .loginBox .text .phoneLoginText div.passWord {background-image:url(../images/login/passIcon.jpg);}
+#wrap-content .contentBox .loginBox .phoneLoginText .loginBt {margin:20px 0 0 10px;width:342px;height:39px;background:url(../images/login/land-icon.png) no-repeat 0 -7px;cursor:pointer;}
+#wrap-content .contentBox .loginBox .phoneLoginText .loginBt:hover {background-position:0 -60px;}
+#wrap-content .contentBox .loginBox .phoneLoginText .noMoneyLogin {text-align:right;height:30px;line-height:30px;font-size:14px;border-bottom:1px solid #ccc;}
+#wrap-content .contentBox .loginBox .phoneLoginText .cooprate {padding:10px 0;}
+
+
+#wrap-foot {width:100%;}
+#wrap-foot .footBox {width:1200px;text-align: center;padding: 50px 0 50px 0;}
+#wrap-foot .footBox a {height:20px;line-height:20px;padding: 0 37px;font: 14px/14px 微软雅黑;color: #656766;font-weight: bold;}

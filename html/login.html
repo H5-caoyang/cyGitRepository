@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录-央广购物网</title>
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+		<style>
+			* {margin:0;padding:0;}
+			*:focus {outline:none;}
+			body {font-family:"宋体";font-size:12px;}
+			input,select{font-size:12px;line-height:16px;}
+			img{border:0;display:block;}
+			li{list-style:none}
+			a{color:#666;text-decoration:none;}
+			a:hover{color:#C00;text-decoration:underline;}
+		</style>
+		<script src="../js/jquery-1.12.3.js"></script>
+        <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+        <script src="../js/myCookie.js"></script>
+		<script src="../js/login.js"></script>
+		<script>
+			var winWidth;
+			window.onload=function()
+			{
+				winWidth = document.documentElement.clientWidth||document.body.clientWidth;
+                loginStart();
+			}
+			function fnsCall()
+			{
+		  
+			}
+			$(document).ready(function()
+			{
+
+			});
+		</script>
+	</head>
+	<body>
+        <div id="wrap-head">
+            <div class="headBox">
+                <div class="logo"><a href="index.html"><img src="../images/head/new-logo.jpg" alt=""></a></div>
+                <div class="hello">您好，欢迎光临央广购物 |<a href="login.html">请登录</a></div>
+                <div class="helpCenter">
+                    
+                </div>
+            </div>
+        </div>
+		<div id="wrap-content">
+        	<div class="contentBox">
+                <div class="mainPic"><img src="../images/login/loginBg-1.jpg" alt=""></div>
+                <div class="loginBox">
+                    <div class="titleBox">
+                        <div class="nameLogin loginTitle">用户名登录</div>
+                        <div class="phoneLogin loginTitle">手机快速登录</div>
+                    </div>
+                    <div class="text">
+                        <div class="nameLoginText">
+                            <p class="userText">用户名/手机号</p>
+                            <div class="userName div-in">
+                                <input type="text" id="userNameText" class="input-in">
+                            </div>
+                            <p class="inputTips"></p>   
+                            <p class="passText">密码</p>
+                            <div class="passWord div-in">
+                                <input type="password" id="passWordText" class="input-in">
+                            </div>
+                            <p class="inputTips"></p>
+                            <div class="checkBox">
+                                <input type="checkbox" id="rememberUser"><span>记住用户名</span>
+                                <input type="checkbox" id="autoLogin"><span>自动登录</span>
+                            </div>
+                            <div class="loginBt"></div>
+                            <div class="fogetPass">
+                                <a href="#">忘记密码？</a> |
+                                <a href="regist.html">免费注册</a>   
+                            </div>
+                            <div class="cooprate">
+                                <p>合作网站账户登录</p>
+                                <div><a href="#"></a></div>
+                            </div>
+                        </div>
+                        <div class="phoneLoginText">
+                            <p class="userText">手机号</p>
+                            <div class="phoneNum div-in">
+                                <input type="text" id="phoneNumText" class="input-in">
+                            </div> 
+                            <p class="inputTips"></p> 
+                            <div class="getDPass">  
+                                <span class="getBt">获取动态密码</span><span class="getTip">验证码已发送，请查收短信</span>
+                            </div> 
+                            <!--<p class="inputTips"></p>-->
+                            <p class="dPassText">动态密码</p>
+                            <div class="passWord div-in">
+                                <input type="password" id="dPassWordText" class="input-in">
+                            </div>
+                            <p class="inputTips"></p>
+                            <div class="loginBt"></div>
+                            <div class="noMoneyLogin">
+                                <a href="regist.html">免费注册</a>   
+                            </div>
+                            <div class="cooprate">
+                                <p>合作网站账户登录</p>
+                                <div><a href="#"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrap-foot">
+            <div class="footBox">
+                 <a href="#">关于我们</a>
+                 <a href="#">联系我们</a>
+                 <a href="#">招商合作</a>
+                 <a href="#">招贤纳士</a>
+                 <a href="#">友情链接</a>
+                 <a target="_blank" href="#" class="new-QVC">QVC</a>
+             </div>
+        </div>
+	</body>
+</html>

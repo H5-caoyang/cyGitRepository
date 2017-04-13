@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>注册-央广购物网</title>
+        <link rel="stylesheet" type="text/css" href="../css/regist.css">
+        <style>
+            * {margin:0;padding:0;}
+            *:focus {outline:none;}
+            body {font-family:"宋体";font-size:12px;}
+            input,select{font-size:12px;line-height:16px;}
+            img{border:0;display:block;}
+            li{list-style:none}
+            a{color:#666;text-decoration:none;}
+            a:hover{color:#C00;text-decoration:underline;}
+        </style>
+        <script src="../js/jquery-1.12.3.js"></script>
+        <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+        <script src="../js/myCookie.js"></script>
+        <script src="../js/regist.js"></script>
+        <script>
+            var winWidth;
+            window.onload=function()
+            {
+                winWidth = document.documentElement.clientWidth||document.body.clientWidth;
+                registStart();
+            }
+            function fnsCall()
+            {
+          
+            }
+            $(document).ready(function()
+            {
+
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap-head">
+            <div class="headBox">
+                <div class="logo"><a href="index.html"><img src="../images/head/new-logo.jpg" alt=""></a></div>
+                <div class="hello">您好，欢迎光临央广购物 |<a href="login.html">请登录</a></div>
+                <div class="helpCenter">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="wrap-content">
+            <div class="contentBox">
+                <div class="mainPic"><img src="../images/login/loginBg-1.jpg" alt=""></div>
+                <div class="registBox">
+                    <p class="registTitle">
+                        <span class="registTitle-left">没有账号？请注册</span>
+                        <span class="registTitle-right">已注册？<a href="login.html">请登录</a></span>
+                    </p>   
+                    <form action="" >
+                        <div class="inputDiv div-1">
+                            <input type="text" value="手机号码" id="phoneNum" class="input-in">
+                            <br>
+                        </div>
+                        <p class="inputTips"></p>
+                        <div class="div-2">
+                            <div class="inputDiv"><input type="text" value="请输入验证码" id="yzCode" class="input-in"></div>
+                            <div class="yzCode">2895</div>
+                        </div>
+                        <p class="inputTips"></p>
+                        <div class="div-3"> 
+                            <div class="inputDiv"><input type="text" value="短信验证码" id="dxCode" class="input-in"></div>
+                            <div class="dxCode"><span>获取短信验证码</span></div>
+                        </div>
+                        <p class="inputTips"></p>
+                        <div class="inputDiv div-4">
+                            <input type="password" value="" id="passWord" class="input-in">
+                            <span class="passAbsolut">密码</span>
+                            <br>
+                        </div>
+                        <p class="inputTips"></p>
+                        <div class="inputDiv div-5">
+                            <input type="password" value="" id="surePassWord" class="input-in">
+                            <span class="passAbsolut">请确认密码</span>
+                            <br>
+                        </div>
+                        <p class="inputTips"></p>
+                        <div class="div-6">
+                            <input type="checkbox" value="" id="phoneNum"><span>我已阅读并接受<a href="#">《央广购物网络服务使用条款》</a></span>
+                        </div>
+                        <div class="registBt">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="wrap-foot">
+            <div class="footBox">
+                 <a href="#">关于我们</a>
+                 <a href="#">联系我们</a>
+                 <a href="#">招商合作</a>
+                 <a href="#">招贤纳士</a>
+                 <a href="#">友情链接</a>
+                 <a target="_blank" href="#" class="new-QVC">QVC</a>
+             </div>
+        </div>
+    </body>
+</html>

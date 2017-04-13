@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>详情页-央广购物网</title>
+		<link rel="stylesheet" type="text/css" href="../css/head.css">
+        <link rel="stylesheet" type="text/css" href="../css/proMsg.css">
+        <link rel="stylesheet" type="text/css" href="../css/foot.css">
+		<style>
+			* {margin:0;padding:0;}
+			*:focus {outline:none;}
+			body {font-family:"宋体";font-size:12px;}
+			input,select{font-size:12px;line-height:16px;}
+			img{border:0;display:block;}
+			li{list-style:none}
+			a{color:#666;text-decoration:none;}
+			a:hover{color:#C00;text-decoration:underline;}
+		</style>
+		<script src="../js/jquery-1.12.3.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/myCookie.js"></script>
+        <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+		<script src="../js/head.js"></script>
+		<script src="../js/jquery.jqzoom.js"></script>
+		<script src="../js/proMsg.js"></script>
+		<script>
+			var winWidth;
+			window.onload=function()
+			{
+				winWidth = document.documentElement.clientWidth||document.body.clientWidth;
+			}
+			function fnsCall()
+			{
+				headStart();
+				proMsgStart();
+			}
+			$(document).ready(function()
+				{
+					$("#myHead").load("head.html",function()
+					{
+						$("#myFoot").load("foot.html",function()
+						{
+							fnsCall();
+						});
+					});
+				});
+		</script>
+	</head>
+	<body>
+		<div id="myHead"></div>
+		<div id="myContent">
+			<div id="wrap-content">
+				<div class="contentBox">
+					<div class="thisPosTitle">
+						当前位置:
+						<a href="#">首页</a>
+						>
+						<a href="#">时尚用品</a>
+					</div>
+					<div class="contLeft">
+						<div class="proKindBox">
+							<h3>时尚用品 分类</h3>
+							<div class="kind-1">
+								<div class="kind-2">
+									<h4><a href="#">> 服饰</a></h4>
+									<div class="proKind">
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+									</div>
+								</div>
+								<div class="kind-2">
+									<h4><a href="#">> 服饰</a></h4>
+									<div class="proKind">
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart lastBuy">
+							<div class="title">
+								<span>浏览此类商品的用户最终购买了</span>
+							</div>
+							<div class="productBox">
+								<div class="product">
+									<a href="#" class="proPic">
+										<img src="../images/productsMsg/110729_2.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">懋隆灰白珍珠四排手链</a><p>￥398.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart newRecommond">
+							<div class="title">
+								<span>新品推荐</span>
+							</div>
+							<div class="productBox">
+								<div class="product pro-1">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-2">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-3">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-4">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-5">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart recentBrowse">
+							<div class="title">
+								<span>您最近浏览的商品</span>
+							</div>
+							<div class="productBox">
+								<div class="product pro-1">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-2">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-3">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-4">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-5">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contRight">
+						<div class="spTitle">
+							<div class="left">商品图片</div>
+							<div class="right">商品编号：117236</div>
+						</div>
+						<div class="spMsgBox">
+							<div class="spPic">
+								<div class="bigPic">
+									<img src="" alt="">
+									<div class="scalePic">
+									</div>
+									<div class="scaleGlass">
+									</div>
+								</div>
+								<div class="smallPics">
+									<div class="leftScroll"></div>
+									<div class="picsBox">
+										<div class="pics">
+											<!-- <div><img src="../images/productsMsg/117236_0.jpg" alt=""></div>
+											<div><img src="../images/productsMsg/117236_0_0.jpg" alt=""></div> -->
+										</div>
+									</div>
+									<div class="rightScroll"></div>
+								</div>
+							</div>
+							<div class="spMsg">
+								<p class="title"></p>
+								<p class="brand">品 牌：<a href="#"></a></p>
+								<p class="priceBox">
+									<span class="actPrice">活动价：</span>
+									<span class="price">￥<b></b></span>
+								</p>
+								<div class="setNum">
+									<span>数 量：</span>
+									<span class="conBt sub"><img src="../images/productsMsg/subBg.gif" alt=""></span>
+									<input type="text" value="1" id="buyProNum">
+									<span class="conBt add"><img src="../images/productsMsg/addBg.gif" alt=""></span>
+								</div>
+								<div class="distributAddr">
+									<span>配 送 至：</span>
+									<span>请选择地区</span>
+									<span class="isHasPro"></span>
+								</div>
+								<div class="buyNow">
+									<a href="shoppingCar.html" id="buyNowBt" class="butBts"></a><span id="addToCarBt" class="butBts"></span>
+									<div id="jrgwc">
+										<p class="jrgwc_btClose" onclick="javascript:document.getElementById('jrgwc').style.display='none';">×
+										</p> 
+										<p class="jrgwc_tb">
+								        	<span>商品已成功加入购物车！</span><br>
+										</p>
+										<p class="jrgwc_char">
+											 购物车共 <span id="jrgwc_char_allNum">11</span> 件商品 
+										</p>			
+										<p class="jrgwc_bt">
+										 	<a class="jrgwc_btChar" href="shoppingCar.html">去结算》</a>
+										    <a class="jrgwc_btGoShop" style="cursor:pointer;" onclick="javascript:document.getElementById('jrgwc').style.display='none';">继续购物》 
+										    </a>	
+										</p>    
+								    </div>
+								</div>
+								<div class="promise">
+									<div class="proBack">支持15天无理由退货，30天只换不修</div>
+									<div class="invoice">提供正规发票</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myFoot"></div>
+	</body>
+</html>

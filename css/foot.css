@@ -1,0 +1,23 @@
+/*底部样式*/
+#wrap-foot {width:100%;}
+#wrap-foot div.part-1 {width:1000px;height:75px;margin:0 auto;overflow:hidden;}
+#wrap-foot div.part-1 .linkBox {float:left;width:200px;margin-top:8px;background:url(../images/foot/footLiBg.gif) no-repeat 90px center;overflow:hidden;}
+#wrap-foot div.part-1 .linkBox .linkTitle {float:left;width:90px;margin-top:10px;padding-top:24px;background:url(../images/foot/footIcon-1.gif) no-repeat center 0;font-size:14px;text-align:center;}
+#wrap-foot div.part-1 .lb-2 .linkTitle {background-image:url(../images/foot/footIcon-2.gif);}
+#wrap-foot div.part-1 .lb-3 .linkTitle {background-image:url(../images/foot/footIcon-3.gif);}
+#wrap-foot div.part-1 .lb-4 .linkTitle {background-image:url(../images/foot/footIcon-4.gif);}
+#wrap-foot div.part-1 .lb-5 .linkTitle {background-image:url(../images/foot/footIcon-5.gif);}
+#wrap-foot div.part-1 .linkBox ul {float:left;width:80px;margin-left:20px;}
+#wrap-foot div.part-1 .linkBox ul li {line-height:20px;}
+#wrap-foot div.part-2 {width:1000px;height:72px;margin:0 auto;background:url(../images/foot/N_BT.jpg) no-repeat;}
+#wrap-foot div.midLine {width:100%;height:10px;background:url(../images/foot/footBg.jpg) repeat;}
+#wrap-foot div.part-3 {width:1000px;margin:0 auto;padding:12px 0;overflow:hidden;}
+#wrap-foot div.part-3 .CNRPic {float:left;width:141px;height:162px;background:url(../images/foot/footPic-1.jpg) no-repeat 0 35px;border-right:1px solid #ccc;} 
+#wrap-foot div.part-3 .cont {float:left;margin-left: 20px;}
+#wrap-foot div.part-3 .cont .linkFoot {}
+#wrap-foot div.part-3 .cont .linkFoot a {margin-right:30px;font-size:14px;font-weight:600;}
+#wrap-foot div.part-3 .cont .linkFoot a:hover {color:#666;}
+#wrap-foot div.part-3 .cont .textBox {overflow:hidden;margin-top:10px;}
+#wrap-foot div.part-3 .cont .textBox .text {float:left;width:450px;}
+#wrap-foot div.part-3 .cont .textBox .text p {line-height:20px;color:#666;}
+#wrap-foot div.part-3 .cont .textBox a.QRCode {float:left;display:block;margin:10px 0 0 10px;}

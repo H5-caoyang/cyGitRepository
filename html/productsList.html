@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品列表-央广购物网</title>
+		<link rel="stylesheet" type="text/css" href="../css/head.css">
+        <link rel="stylesheet" type="text/css" href="../css/proList.css">
+        <link rel="stylesheet" type="text/css" href="../css/foot.css">
+		<style>
+			* {margin:0;padding:0;}
+			*:focus {outline:none;}
+			body {font-family:"宋体";font-size:12px;}
+			input,select{font-size:12px;line-height:16px;}
+			img{border:0;display:block;}
+			li{list-style:none}
+			a{color:#666;text-decoration:none;}
+			a:hover{color:#C00;text-decoration:underline;}
+		</style>
+		<script src="../js/jquery-1.12.3.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/myCookie.js"></script>
+        <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+		<script src="../js/head.js"></script>
+		<script src="../js/proList.js"></script>
+		<script>
+			var winWidth;
+			window.onload=function()
+			{
+				winWidth = document.documentElement.clientWidth||document.body.clientWidth;
+			}
+			function fnsCall()
+			{
+				proListLoadJson();
+				headStart();
+			}
+			$(document).ready(function()
+				{
+					$("#myHead").load("head.html",function()
+					{
+						$("#myFoot").load("foot.html",function()
+							{
+								fnsCall();
+							});
+					});
+				});
+		</script>
+	</head>
+	<body>
+		<div id="myHead"></div>
+		<div id="myContent">
+			<div id="wrap-content">
+				<div class="contentBox">
+					<div class="thisPosTitle">
+						当前位置:
+						<a href="#">首页</a>
+						>
+						<a href="#">时尚用品</a>
+					</div>
+					<div class="contLeft">
+						<div class="proKindBox">
+							<h3>时尚用品 分类</h3>
+							<div class="kind-1">
+								<div class="kind-2">
+									<h4><a href="#">> 服饰</a></h4>
+									<div class="proKind">
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+									</div>
+								</div>
+								<div class="kind-2">
+									<h4><a href="#">> 服饰</a></h4>
+									<div class="proKind">
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+										<div><a href="#">箱包</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart sellChart">
+							<div class="title">
+								<span>此类销售排行</span>
+							</div>
+							<div class="productBox">
+								<div class="product pro-1">
+									<div class="num"></div>
+									<a href="#" class="proPic">
+										<img src="../images/productsList/sellChart-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">爱澜依时尚精品拉杆箱套组</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-2">
+									<div class="num"></div>
+									<a href="#" class="proPic">
+										<img src="../images/productsList/sellChart-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">爱澜依时尚精品拉杆箱套组</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-3">
+									<div class="num"></div>
+									<a href="#" class="proPic">
+										<img src="../images/productsList/sellChart-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">爱澜依时尚精品拉杆箱套组</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-4">
+									<div class="num"></div>
+									<a href="#" class="proPic">
+										<img src="../images/productsList/sellChart-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">爱澜依时尚精品拉杆箱套组</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-5">
+									<div class="num"></div>
+									<a href="#" class="proPic">
+										<img src="../images/productsList/sellChart-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">爱澜依时尚精品拉杆箱套组</a><p>￥398.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart tvHotShow">
+							<div class="title">
+								<span>今日电视热播商品</span><a href="#">更多&gt;&gt;</a>
+							</div>
+							<div class="productBox">
+								<div class="product pro-1">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-2">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-3">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-4">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-5">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/tvHotShow-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.L针织修身连衣裙</a><p>￥398.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart recentBrowse">
+							<div class="title">
+								<span>您最近浏览的商品</span>
+							</div>
+							<div class="productBox">
+								<div class="product pro-1">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-2">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-3">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-4">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+								<div class="product pro-5">
+									<a href="#" class="proPic">
+										<img src="../images/productsList/recentBrowse-1.jpg" alt="">
+									</a>
+									<div class="proBewrite">
+										<a href="#">N.财源滚滚台湾花莲七彩玉风水球</a><p>￥398.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contRight">
+						<div class="showPic">
+							<a href="#"><img src="../images/productsList/listShow-1.jpg" alt=""></a>
+						</div>
+						<div class="hotRecommendBox">
+							<h4 class="title">热卖推荐</h4>
+							<div class="hotRecommend hr-1">
+								<div class="proPic">
+									<a href="#"><img src="../images/productsList/hotRecommend-1.jpg" alt=""></a>
+								</div>
+								<div class="proBewrite">
+									<a href="#" class="bewrite">财源滚滚台湾花莲七彩玉风水球</a>
+									<p>￥398.0</p>
+									<a href="#" class="lookNow">
+										<img src="../images/productsList/lookNow.gif" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="hotRecommend">
+								<div class="proPic">
+									<a href="#"><img src="../images/productsList/hotRecommend-1.jpg" alt=""></a>
+								</div>
+								<div class="proBewrite">
+									<a href="#" class="bewrite">财源滚滚台湾花莲七彩玉风水球</a>
+									<p>￥398.0</p>
+									<a href="#" class="lookNow">
+										<img src="../images/productsList/lookNow.gif" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="hotRecommend">
+								<div class="proPic">
+									<a href="#"><img src="../images/productsList/hotRecommend-1.jpg" alt=""></a>
+								</div>
+								<div class="proBewrite">
+									<a href="#" class="bewrite">财源滚滚台湾花莲七彩玉风水球</a>
+									<p>￥398.0</p>
+									<a href="#" class="lookNow">
+										<img src="../images/productsList/lookNow.gif" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="proFilter">
+							<h3>厨具-商品筛选</h3>
+							<div class="brand">
+								<span class="title">品牌：</span>
+								<a href="#" class="all">全部</a>
+								<span> | </span>
+								<span class="sp-last">展开</span>
+							</div>
+							<div class="price">
+								<span class="title">价位：</span>
+								<a href="#" class="all">全部</a>
+								<span> | </span>
+								<a href="#" class="priceNum">0-200</a>
+								<a href="#" class="priceNum">200-500</a>
+								<a href="#" class="priceNum">500-700</a>
+								<a href="#" class="priceNum">700-1000</a>
+								<a href="#" class="priceNum">1000-1500</a>
+								<a href="#" class="priceNum">1500-2000</a>
+								<a href="#" class="priceNum">2000以上</a>
+							</div>
+						</div>
+						<div class="chartBy">
+							<div class="div-1"><a>销量</a>
+							</div>
+							<div class="div-2"><a>价格</a>
+							</div>
+							<div class="div-3"><a>最新上架</a>
+							</div>
+						</div>
+						<div class="proList">
+							<!-- <div class="proListBox plb-1">
+								<div class="pro">
+									<a href="#" class="pic"><img src="../images/productsList/pro-1.jpg" alt=""></a>
+									<div class="text">
+										<div class="div-1">￥<span>1153.0</span></div>
+										<div class="div-2"><div>编号：<span>114546</span></div><a href="#"></a>
+										</div>
+										<div class="div-3"><a href="#">宾爵简约真钻全自动机械腕表</a></div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+						<div class="changePage">
+							<span class="spBox">
+								<span class="all">共找到<b>7</b>项相关结果</span>
+								<span class="index">页次：<b>1</b>/<b>1</b></span>
+								<span class="pageBts">
+									<!--<a href="#" class="btForArr"><<</a>
+									<a href="#" class="btFor">上一页</a>
+	                                <span class="pageIndexBox">
+	                                	<span class="pageIndex">
+	                                    	<a href="#" class="pageNum">1</a>
+	                                    </span>
+	                                </span>
+									<a href="#" class="btNext">下一页</a>
+	                                <a href="#" class="btNextArr">>></a>-->
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myFoot"></div>
+	</body>
+</html>
